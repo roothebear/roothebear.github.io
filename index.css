@@ -56,3 +56,19 @@ pre {
 a {
   color: #e81c4f;
 }
+
+.button {
+  background-color: rgb(167, 167, 167); /* Green */
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.button:hover {
+  background-color: #e81c4f;
+  color: white;
