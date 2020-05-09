@@ -4,7 +4,10 @@ body {
   max-width: 50em;
 }
 
+
 /* Font specs */
+@import 'https://fonts.googleapis.com/css?family=jost|roboto:300,400,500';
+
 body {
   font-family: "jost" "roboto", sans-serif; 
   font-size: 20px;
