@@ -57,7 +57,7 @@ a {
   color: #e81c4f;
 }
 
-.button {
+button {
   background-color: rgb(167, 167, 167); /* Green */
   border: none;
   border-radius: 8px;
@@ -69,6 +69,6 @@ a {
   font-size: 20px;
 }
 
-.button:hover {
+button:hover {
   background-color: #e81c4f;
   color: white;
