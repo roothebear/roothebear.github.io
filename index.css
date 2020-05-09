@@ -63,6 +63,8 @@ button {
   border-radius: 8px;
   color: white;
   padding: 15px 32px;
+  margin-right: 20px;
+  margin-left: 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
