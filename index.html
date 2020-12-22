@@ -13,8 +13,6 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-
 </head>
 
 <body>
@@ -42,15 +40,16 @@
         <!-- Site sections below nav -->
         <div class="site-sections">
         <!-- Section: About me -->
-        <div class="wrapper-white">
+        <div class="wrapper-white blue-font">
             <section>
-                <div class="section-padding blue-font">
+                <div class="header-padding">
+                    <h2>Who am I?</h2>
+                </div>
+                <div class="section-padding">
                     <div class="section-image-wrapper">
                         <img src="roofun.jpg" class="section-image" alt="Bird">
-
                     </div>
                     <div class="section-text-padding">
-                        <h2>Who am I?</h2>
                         <p>
                             Hi, my name is <a href="https://www.linkedin.com/in/roodasilva/">Roo</a>, Director of an awesome non-profit in the UK - <a href="https://www.keenuk.org">KEEN</a>.
                             I get to solve fun problems and create things every day, for work! I'm part of a fantastic team and community of partners and collaborators.
@@ -65,25 +64,29 @@
             </section>
         </div>
         <!-- Section: Projects -->
-        <div class="wrapper-blue">
+        <div class="wrapper-blue white-font">
             <section>
-                <div class="section-padding white-font">
+                <div class="header-padding">
+                    <h2>Experiments</h2>
+                </div>
+                <div class="section-padding">
                     <div class="section-text-padding">
-                        <h2>Projects</h2>
                         <p>Things I'm trying to make work in the name of learning! Nothing to report so far... </p>
-                        <button class="button" style="float: left;">Experiment one</button>
-                        <button class="button" style="float: left;">Experiment two</button>
-                        <button class="button" style="float: left;">Experiment three</button>
+                        <button class="button" style="float: left;">Experiment: Change background colour</button>
+                        <button class="button buttontwo" style="float: left;" onclick="myFunction()">Experiment: Change button colour</button>
+                        <button class="button" style="float: left;" onclick="changeBackground()">Experiment: Change background colour</button>
                     </div>
                 </div>
             </section>
         </div>
         <!-- Section: What I have learnt -->
-        <div class="wrapper-white">
+        <div class="wrapper-white blue-font">
             <section>
-                <div class="section-padding blue-font">
+                <div class="header-padding">
+                    <h2>What I am learning</h2>
+                </div>
+                <div class="section-padding">
                     <div class="section-text-padding">
-                        <h2>What I have learnt</h2>
                         <p>
                             Basic HTML, CSS, and JavaScript on the front-end web side, basic Python, and one programme compiled from C! Look forward to developing
                             greater understanding of these tools, and starting to delve into databases with MongoDB...
@@ -112,6 +115,12 @@
             <p>Made by me, with the help of the many free coding tutorials and resources made by kind people across the web.</p>
         </footer>
     </div>
+
+<!--bootstrap and script.js for change colour function-->
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script src="script.js"></script>
+
 
 </body>
 

@@ -49,6 +49,17 @@ section {
   padding: 20px
 }
 
+/* Heading sections */
+
+.header-padding {
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+  min-height: 50px;
+}
+
+/* Mobile friendly css */
+
 @media (max-width: 640px) {
   .section-padding {
     flex-direction: column;
@@ -100,10 +111,10 @@ section {
 /* Buttons css */
 
 .button {
-  background-color: rgb(167, 167, 167); /* Grey */
+  background-color: #dbdbdb; /* Grey */
   border: none;
   border-radius: 8px;
-  color: white;
+  color: #01090e;
   padding: 15px 32px;
   margin-right: 20px;
   margin-left: 20px;
@@ -126,7 +137,7 @@ button:hover {
 
 
 .blue-font h2, p {
-  color: rgb(1, 9, 14);
+  color: #01090e;
 }
 
 .white-font h2 {
