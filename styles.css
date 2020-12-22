@@ -16,37 +16,37 @@ html, body {
   background: #1abc9c;
 }
 
+.wrapper-white {
+  background: #ffffff;
+}
+
 section {
   margin: 0 auto;
   max-width: 960px;
 }
 
-.section-padding h2 {
-  color: white;
-}
-
-.section-padding p {
-  color: white;
-}
-
 .section-padding {
   display: flex;
   flex-direction: row;
-  padding: 32px;
+  padding: 30px;
   min-height: 380px;
 }
 
 .section-padding div {
-  width: 40%;
+  width: 100%;
 }
 
 .section-text-padding {
-  padding: 64px;
+  padding: 20px;
 }
 
 .section-image {
   width: 100%;
   height: auto;
+}
+
+.section-image-wrapper {
+  padding: 20px
 }
 
 @media (max-width: 640px) {
@@ -61,6 +61,20 @@ section {
   .section-text-padding {
     padding: 0;
   }
+
+  .section-image-wrapper {
+  padding: 0;
+}
+
+  .navbar {
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    letter-spacing: 2px;
+  }
+
 }
 
   .navbar {
@@ -82,3 +96,44 @@ section {
     padding: 32px;
     text-align: center;
 }
+
+/* Buttons css */
+
+.button {
+  background-color: rgb(167, 167, 167); /* Grey */
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 15px 32px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #e81c4f;
+  color: white;
+}
+
+
+/* Font classes */
+
+
+.blue-font h2, p {
+  color: rgb(1, 9, 14);
+}
+
+.white-font h2 {
+  color: white;
+}
+
+.white-font p {
+  color: white;
+}
+
