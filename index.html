@@ -1,33 +1,94 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
     <title>Roo the bear</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost|Roboto">
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-    <header>
-        <h1>My Development Sandbox</h1>
-        <p>
-            <a href="https://www.linkedin.com/in/rupert-da-silva-348a55165/">by Roo da Silva</a>
-        </p>
-    </header>  
-    <main>
-        <img src="roo.jpg" alt="Me!" width="200">
-        <p>
-        Hi, my name is Roo, director of <a href="https://www.keenuk.org">KEEN</a>, an awesome non-profit in the UK. 
-        I am lucky to get to work everyday on solving problems and creating things 
-         as part of a fantastic team, in a fab community, and with amazing partners and collaborators.
-        </p>
-        <p>
-        Digital plays an increasingly central role in our work, and it is easy to feel out of the loop when you do not understand things, even if just a bit. 
-        This 'sandbox' is my attempt to understand more about what our developers do, through learning a bit myself. Hopefully - as a result - 
-        I will be in a better position to support them, and truly appreciate their work!
-        </p>
-        <button style="float: left;">Experiment one</button>
-        <button style="float: left;">Experiment two</button>
-        <button style="float: left;">Experiment three</button>
-    </main>  
+    <!-- Navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">myCodingSandbox!</a>
+                <a href="https://www.linkedin.com/in/rupert-da-silva-348a55165/">by Roo da Silva</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">About me</a></li>
+                    <li><a href="#">My projects</a></li>
+                    <li><a href="#">Contact me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- First Container -->
+    <div class="container-fluid bg-1 text-center">
+        <h3 class="margin">About me</h3>
+        <img src="roo.jpg" alt="Me!" class="img-responsive img-circle margin" style="display:inline"  width="350" height="350">
+        <h3>Hi, my name is Roo, director of <a href="https://www.keenuk.org">KEEN</a>, an awesome non-profit in the UK.
+        I am lucky to get to work everyday on solving problems and creating things
+        as part of a fantastic team, in a fab community, and with amazing partners and collaborators.</h3>
+    </div>
+
+    <!-- Second Container -->
+    <div class="container-fluid bg-2 text-center">
+        <h3 class="margin">My projects</h3>
+        <p>Digital tech plays an increasingly central role in our work, and it is easy to feel out of the loop when you do not
+        understand things, even if just a bit.
+        This 'sandbox' is my attempt to understand more about what our developers do, through learning a bit myself.
+        Hopefully - as a result -
+        I will be in a better position to support them, and truly appreciate their work! </p>
+        <a href="#" class="btn btn-default btn-lg">
+            <span class="glyphicon glyphicon-search"></span> Search
+        </a>
+    </div>
+
+    <!-- Third Container (Grid) -->
+    <div class="container-fluid bg-3 text-center">
+        <h3 class="margin">Contact me</h3><br>
+        <div class="row">
+            <div class="col-sm-4">
+                <button style="float: left;">Experiment one</button>
+                <button style="float: left;">Experiment two</button>
+                <button style="float: left;">Experiment three</button>
+                <img src="birds1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-4">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+                <img src="birds2.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-4">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+                <img src="birds3.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container-fluid bg-4 text-center">
+        <p>Made by Roo da Silva</a></p>
+    </footer>
 </body>
+
 </html>
