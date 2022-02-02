@@ -1,150 +1,144 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" 
+    />
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
 
-<html>
-
-<head>
-    <title>Roo's online Sandbox</title>
-    <meta charset="utf-8">
-    <meta lang="en-us">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-
-<body>
-    <div class="site-wrapper">
-        <!-- Navbar -->
-        <nav class="navbar navbar-default">
-            <div class="container">
-                <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">.rooTheBear</a>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">About me</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- Site sections below nav -->
-        <div class="site-sections">
-        <!-- Section: About me -->
-        <div class="wrapper-white blue-font">
-            <section>
-                <div class="header-padding">
-                    <h2>Who am I?</h2>
-                </div>
-                <div class="section-padding">
-                    <div class="section-image-wrapper">
-                        <img src="roofun.jpg" class="section-image" alt="Bird">
-                    </div>
-                    <div class="section-text-padding">
-                        <p>
-                            Hi, my name is <a href="https://www.linkedin.com/in/roodasilva/">Roo</a>, Director of an awesome non-profit in the UK - <a href="https://www.keenuk.org">KEEN</a>.
-                            I get to solve fun problems and create things every day, for work! I'm part of a fantastic team and community of partners and collaborators.
-                        </p>
-                        <p>
-                            Digital tech plays a central role in our work. I have found that it is easy to feel out of the loop when you do not have sufficient understanding of how things work.
-                            This online 'sandbox' is my attempt to learn more about what our developers do by getting practical myself. Hopefully - as a result -
-                            I will be in a better position to support them, and truly appreciate their work!
-                        </p>
-                    </div>
-                </div>
-            </section>
+    <!-- main header -->
+    <header class="mainHeader" id="mainHeader">
+      <nav id="topNav">
+        <div class="navContainer">
+          <a href="#home" id="title">.dev[rooDaSilva]</a>
         </div>
-        <!-- Section: Projects -->
-        <div class="wrapper-blue white-font">
-            <section>
-                <div class="header-padding">
-                    <h2>Experiments</h2>
-                </div>
-                <div class="section-padding">
-                    <div class="section-text-padding">
-                        <p>Things I'm trying to make work in the name of learning! Nothing to report so far... </p>
-                        <button class="button" style="float: left;">Experiment: Change background colour</button>
-                        <button class="button buttontwo" style="float: left;" onclick="myFunction()">Experiment: Change button colour</button>
-                        <button class="button" style="float: left;" onclick="changeBackground()">Experiment: Change background colour</button>
-                    </div>
-                </div>
-            </section>
+        <div class="navContainer">
+          <a href="#topOfPage">
+            <img class="icon" id="portfolioIcon" src="./images/ideas-icon-320px.png" alt="portfolio-icon"></img>
+          </a>
+          <a href="#footer">
+            <img class="icon" id="personIcon" src="./images/person-icon-320px-green.png" alt="person-icon"></img>
+          </a>
         </div>
-        <!-- Section: To do list -->
-        <div class="wrapper-white blue-font">
-            <section>
-                <div id="myDIV" class="header-padding">
-                    <h2>My To Do List</h2>
-                </div>
-                <div class="section-padding">
-                    <div class="section-text-padding">
-                    <input type="text" id="myInput" placeholder="Title...">
-                    <span onclick="newElement()" class="addBtn">Add</span>
-                    </div>
-                </div>
+      </nav>
+      <!-- horizontal divider -->
+      <hr />
+    </header>
 
-                    <ul id="myUL">
-                        <li>Hit the gym</li>
-                        <li class="checked">Pay bills</li>
-                        <li>Meet George</li>
-                        <li>Buy eggs</li>
-                        <li>Read a book</li>
-                        <li>Organize office</li>
-                    </ul>
-            </section>
-        </div>
-        <!-- Section: What I have learnt -->
-        <div class="wrapper-white blue-font">
-            <section>
-                <div class="header-padding">
-                    <h2>What I am learning</h2>
-                </div>
-                <div class="section-padding">
-                    <div class="section-text-padding">
-                        <p>
-                            Basic HTML, CSS, and JavaScript on the front-end web side, basic Python, and one programme compiled from C! Look forward to developing
-                            greater understanding of these tools, and starting to delve into databases with MongoDB...
-                        </p>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <!-- Section: Contact -->
-        <div class="wrapper-green">
-            <section>
-                <div class="section-padding white-font">
-                    <div class="section-image-wrapper">
-                        <img class="section-image" src="roophoto.JPG" alt="Service 2">
-                    </div>
-                    <div class="section-text-padding">
-                        <h2>Contact</h2>
-                        <p>You can reach me using the contact form on <a href="https://www.roodasilva.com">www.roodasilva.com.</a> </p>
-                    </div>
-                </div>
-            </section>
-        </div>
-        </div>
-        <!-- Footer -->
-        <footer class="footer text-center">
-            <p>Made by me, with the help of the many free coding tutorials and resources made by kind people across the web.</p>
-        </footer>
-    </div>
-
-<!--bootstrap and script.js for change colour function-->
-<script src="./js/bootstrap.bundle.min.js"></script>
-<script src="./js/jquery-3.4.1.min.js"></script>
-<script src="script.js"></script>
+    <!-- filter section -->
+    <section class="filterSection" id="filterSection">
+      <span>filter:</span>
+      <span class="filterContainer">
+        <!-- <a type="button" class="filter-btn" data-id="all">all</button> -->
+      </span>
+    </section>
 
 
-</body>
+    <!-- to allow scrolling to top of page....! -->
+    <div id="topOfPage"></div>
 
+    <!-- main page content (shifts on sidenav) -->
+    <main id="main">
+      <!-- main section populated with content -->
+      <div class="row">
+        <section class="mainSection">
+        </section>
+      </div>
+    </main>
+
+    <!-- footer with about and contact -->
+    <footer class="footer" id="footer">
+
+      <!-- about section -->
+      <section class="footer-content" id="aboutSection">
+        <h1>About</h1>
+        <p>Non-profit CEO - hiking, reading, and TikTok dancing through life. This portfolio in development will be where I keep my coding and computer science projects, sketches, and blog posts.</p>
+        <br>
+        <a href="#">Download CV</a>
+      </section>
+
+      <!-- socials section -->
+      <section class="footer-content" id="socialsSection">
+        <h1>Find me on:</h1>
+        <div id="socialsContainer">
+          <a href="https://github.com/Roothebear">
+            <img class="icon" id="gitHubIcon" src="./images/GitHub-Mark-Light-32px.png" alt="github-icon"></img>
+          </a>
+          <a href="https://www.linkedin.com/in/roodasilva/">
+            <img class="icon" id="linkedInIcon" src="./images/LI-In-Bug.png" alt="linked-in-icon"></img>
+          </a>
+          <a href="https://github.com/Roothebear">
+            <img class="icon" id="twitterIcon" src="./images/Twitter social icons - circle - blue.png" alt="twitter-icon"></img>
+          </a>
+        </div> 
+      </section>
+
+      <!-- contact section -->
+      <section class="footer-content" id="contactSection">
+        <h1>Contact</h1>
+        <form>Contact form goes here</form>
+      </section>
+    </footer>
+
+    <!-- below footer info -->
+    <section class="footer-content" id="bottomSection">
+      <p>Website designed by me! Copyright 2022</p>
+    </section>
+
+
+    <!-- javascript -->
+    <script src="app.js"></script>
+
+  </body>
 </html>
+
+
+<div class="lightbox" id="content">
+  <div class="w60p h400 scroll">
+    <h2>Your Content Goes Here!</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis felis suscipit tellus euismod varius
+      quis ut nibh. Curabitur in ante nunc, vitae venenatis dui.
+      Phasellus egestas ipsum in ipsum suscipit volutpat. Etiam eu nibh eros. Sed dolor ligula, tincidunt vitae
+      elementum vitae, pharetra vitae eros.
+      Cras risus lectus, aliquam vitae condimentum id, feugiat eu nisi. Cras eu sem erat, eget ultrices enim.
+      Suspendisse feugiat fringilla massa at convallis.
+      Quisque tincidunt, diam quis facilisis volutpat, purus orci rutrum leo, id dapibus tellus ante vel mauris.
+      Quisque posuere, tortor in laoreet hendrerit, ipsum sem molestie nunc, et ultrices erat nulla sed dui. Donec
+      sit amet mi sapien.
+      Maecenas fermentum nulla eu ligula dictum id elementum nisi commodo. Cum sociis natoque penatibus et magnis
+      dis parturient montes, nascetur ridiculus mus. In ac massa quam.
+      Suspendisse nibh nibh, condimentum a porttitor a, placerat in lorem. Sed sit amet elit eget magna
+      condimentum posuere volutpat a neque.</p>
+    <p>Sed dignissim viverra neque, sit amet lobortis elit luctus ac. Proin placerat varius quam eu molestie.
+      Pellentesque vel ante quis metus auctor convallis. Duis mattis risus ac tortor luctus in semper sem
+      fringilla. Vestibulum consectetur iaculis risus vel rutrum.
+      Nam scelerisque gravida felis quis egestas. Mauris vehicula nisl quis felis bibendum nec placerat neque
+      dictum. Donec erat tortor, venenatis id consequat ut, dictum nec enim.
+      Ut ultrices eros vel diam pulvinar aliquam. Phasellus non nisi vitae ligula imperdiet dapibus eleifend sed
+      neque. Morbi gravida dignissim turpis eu auctor.
+      Morbi pellentesque urna vitae nunc dictum elementum. Aliquam erat volutpat. Aenean urna nibh, pretium ut
+      accumsan ut, luctus eget nibh.
+      Nulla sollicitudin fermentum turpis eget rutrum. Integer dignissim dui turpis. Morbi metus libero, suscipit
+      blandit dignissim aliquam, sodales non mi.
+      Proin id augue odio, sit amet gravida mauris.</p>
+    <p>Proin a dignissim orci. Nam nec urna nisi, in blandit lorem. Nulla cursus ornare rhoncus.
+      Nunc lectus orci, tristique et aliquet sed, venenatis et felis. Nullam sodales orci at est pharetra nec
+      aliquam risus scelerisque. Nullam varius, nisi ut sagittis scelerisque, nulla mauris tempus magna, quis
+      pellentesque sem erat a diam.
+      Cras lectus est, dictum ut consequat ut, adipiscing sit amet sapien. Curabitur tincidunt varius gravida.
+      Quisque augue sem, commodo sed molestie venenatis, cursus vehicula lorem.
+      Praesent scelerisque, tortor a euismod malesuada, ipsum ligula semper odio, ultricies molestie sapien metus
+      condimentum felis. Vivamus hendrerit gravida interdum. Fusce at purus eu orci laoreet lobortis.
+      Aliquam cursus mi at tellus fringilla dictum. Sed nec libero dolor. Integer nec neque at mi malesuada
+      tincidunt.</p>
+  </div>
+  <p class="close"><a href="#" title="Close This Content Lightbox"><span><img class="icon" id="twitterIcon" src="./images/close-icon.png"></img></span></a></p>
+</div>
