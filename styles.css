@@ -101,7 +101,7 @@ hr {
 }
 #filterSection{
   position: fixed;
-  top: 66px;
+  top: 58px;
   width: 100%;
   display: block;
   transition: top 0.5s;
