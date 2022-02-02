@@ -94,14 +94,19 @@ function diplayMenuItems(menuItems) {
   let displayMenu = menuItems.map(function (item) {
     //console.log(item);
 
-    return `<article class="menuItem">
-              <div class="itemInfo">
-              <a href="#content" title="Content Lightbox">
-                <img src="${item.img}" class="menuImage"></img>
-              </a>
-              <header>
-                <p class="menuItemTitle">${item.title}</p>
-              </header>
+    return `<article class="menuItem" id="${item.id}" onclick="expandMenuItem(this)">
+              <div class="itemContainer">
+                <a href="#content" title="Content Lightbox">
+                  <img src="${item.img}" class="menuImage"></img>
+                </a>
+                <header>
+                  <h2 class="menuItemTitle" id="menuTitle${item.id}">${item.title}</h2>
+                </header>
+              <section class="menuAddInfo" id="menuInfo${item.id}">
+                <p>Here is a bit more info! Let's make it a bit longer to see the full effect of this on our text boxes. This text will go in the menu object eventually.</p>
+                <br>
+                <button type="button" class="moreInfoBtn">find out more</button>
+              </section>
               </div>
             </article>`;
   });
@@ -164,7 +169,6 @@ function toggleNav() {
 
 
 // navbar scrolling
-
 let prevScrollpos = window.scrollY;
 window.onscroll = function() {
 let currentScrollPos = window.scrollY;
@@ -175,3 +179,29 @@ let currentScrollPos = window.scrollY;
   }
   prevScrollpos = currentScrollPos;
 }
+
+// expand menu to offer more content and link to item page
+function expandMenuItem(element) {
+  const elementId = element.id;
+  const targetSection = document.getElementById(`menuInfo${elementId}`)
+  const targetTitle = document.getElementById(`menuTitle${elementId}`)
+  if ( targetSection.style.display === 'none' || targetSection.style.display === '' ) {
+    targetSection.style.display = 'block';
+  } else {
+    targetSection.style.display = 'none';
+  };
+}
+
+
+//  code for image menu items
+
+// `<article class="menuItem" id="${item.id}">
+//               <div class="itemInfo">
+//               <a href="#content" title="Content Lightbox">
+//                 <img src="${item.img}" class="menuImage" onclick="expandMenuItem(this)"></img>
+//               </a>
+//               <header>
+//                 <p class="menuItemTitle">${item.title}</p>
+//               </header>
+//               </div>
+//             </article>`
