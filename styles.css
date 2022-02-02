@@ -128,7 +128,6 @@ section {
   padding: 10px;
 }
 .itemInfo {
-  background-color: ;
   padding: 0px;
   border: 0px;
 }
@@ -143,7 +142,7 @@ section {
 
 /* row and column decoration */
 .row {
-  margin: 0px -18px;
+  margin: 0px 0px;
   padding: 8px;
 }
 .row > .menu-item {
@@ -172,21 +171,21 @@ section {
 .footer {
   display: grid;
   height: 90vh;
+  width: 100vw;
   padding: 0px;
   padding-top: 20px;
   background-color: #031d2e;
   transition: 0.3s;
 }
-.footerContent {
-  padding: 0px;
-}
+
+
 .footer a, p, h1, h2, h3, h4, h5, h6, form {
   color: white;
 }
 
 /* socials container */
 #socialsContainer {
-  padding-top: 30px;
+  padding-top: 10px;
 }
 #socialsContainer a {
   text-decoration: none;
@@ -205,8 +204,11 @@ section {
 
 .lightbox {
   display: none;
-  /* left: -999em; */
-  position: absolute;
+  /* bottom: 0; 
+  left: 0; 
+  right: 0; 
+  top: 0;  */
+  /* position: relative; */
   transition: 0.3s;
 } 
 
@@ -214,43 +216,54 @@ section {
   color: #031d2e;
 }
 .lightbox:target { 
-  display: grid;
-  bottom: 0; 
-  left: 0; 
-  right: 0; 
-  top: 0; 
+  display: block;
+  /* position: absolute;  */
+  background: rgb(218, 29, 29); 
+
+} 
+.lightbox:target #close { 
   position: absolute; 
+  top: 80px;
+  right: 10px;
+  padding: 0px;
+  z-index: 0; 
 } 
-.lightbox:target .close a { 
-  background: rgb(245, 245, 245); 
-  bottom: 0; left: 0; right: 0; top: 0; 
+/* .close span { 
+  color: #031d2e; 
+  font-size: 2em; 
+  text-indent: 0; 
   position: absolute; 
-  z-index: 1; 
-} 
-.close span { 
-  color: #031d2e; font-size: 2em; text-indent: 0; position: absolute; right: 0.5em; top: 0.5em; 
-} 
+  right: 0.5em; 
+  top: 0.5em; 
+}  */
 /* .close {
   text-indent: -999em;
 } */
 
-.close p {
-  margin: 10px;
-  padding: 10px;
-  right: 10px;
-  top: 0px;
 
-} 
+/* .lightbox:target lightboxContent { 
+  background: #041c25; 
+  position: fixed; 
+  left: 50%; 
+  top: 10%; 
+  z-index: 99; 
+}  */
 
-
-.lightbox:target div { background: #FFFFFF; position: absolute; left: 50%; top: 50px; z-index: 99; } 
-.w60p { margin-left: -45%; width: 90%; }
+.w60p { 
+  width: 100%; 
+}
 /* .w300 { margin-left: -150px; width: 300px; } 
 .w640 { margin-left: -320px; width: 640px; }  */
 /* .h60 { height: 60px; margin-top: -30px; }  */
-.h400 { height: 80vh; margin-top: 30px; } 
+.h400 { 
+  height: 100vh; 
+  margin-top: 0px; 
+} 
 /* .h386 { height: 386px; margin-top: -193px; }  */
-.scroll { overflow-y: scroll; padding: 0 1em; }
+.scroll { 
+  overflow-y: scroll; 
+  padding: 100px; 
+}
 
 
 
