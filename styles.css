@@ -69,8 +69,8 @@ hr {
 
 .icon {
   height: 30px;
-  margin-left: 10px; 
-  margin-right: 10px;
+  margin-left: 0px; 
+  margin-right: 0px;
 }
 .icon:hover, .icon:active {
   transform: scale(1.1) rotate(5deg);
@@ -208,6 +208,7 @@ section {
 .footer {
   display: grid;
   width: 100vw;
+  min-height: 90vh;
   padding: 0px;
   padding-top: 20px;
   background-color: #031d2e;
