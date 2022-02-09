@@ -94,33 +94,19 @@ function diplayMenuItems(menuItems) {
   let displayMenu = menuItems.map(function (item) {
     //console.log(item);
 
-    return `<article class="menuItem" id="${item.id}">
+    return `<article class="menuItem" id="${item.id}" onclick="expandMenuItem(this)">
               <div class="itemContainer">
-                <a href="#popup1" title="Content Lightbox">
+                <a href="#content" title="Content Lightbox">
                   <img src="${item.img}" class="menuImage"></img>
-                  <header>
-                    <h2 class="menuItemTitle" id="menuTitle${item.id}">${item.title}</h2>
-                  </header>
                 </a>
-              </div>
-              <div id="popup1" class="overlay">
-                <div class="popup">
-                <h2>Test article about something really interesting!</h2>
-                <a class="close" href="#/">&times;</a>
-                  <div class="content">
-                    <section class="moreInfo" id="menuInfo${item.id}">
-                      <p>Here is a bit more info! Let's make it a bit longer to see the full effect of this on our text boxes. This text will go in the menu object eventually. Here is a bit more info! Let's make it a bit longer to see the full effect of this on our text boxes. This text will go in the menu object eventually. Here is a bit more info! Let's make it a bit longer to see the full effect of this on our text boxes. This text will go in the menu object eventually.</p>
-                      <br>
-                      <p>Here is a bit more info! Let's make it a bit longer to see the full effect of this on our text boxes. This text will go in the menu object eventually. Here is a bit more info! Let's make it a bit longer to see the full effect of this on our text boxes. This text will go in the menu object eventually. Here is a bit more info! Let's make it a bit longer to see the full effect of this on our text boxes. This text will go in the menu object eventually.</p>
-                      <br>
-                      <p>Here is a bit more info! Let's make it a bit longer to see the full effect of this on our text boxes. This text will go in the menu object eventually.</p>
-                      <br>
-                      <p>Here is a bit more info! Let's make it a bit longer to see the full effect of this on our text boxes. This text will go in the menu object eventually. Here is a bit more info! Let's make it a bit longer to see the full effect of this on our text boxes. This text will go in the menu object eventually. Here is a bit more info! Let's make it a bit longer to see the full effect of this on our text boxes. This text will go in the menu object eventually.</p>
-                      <br>
-                      <button type="button" class="moreInfoBtn">find out more</button>
-                    </section>
-                  </div>
-                </div>
+                <header>
+                  <h2 class="menuItemTitle" id="menuTitle${item.id}">${item.title}</h2>
+                </header>
+              <section class="menuAddInfo" id="menuInfo${item.id}">
+                <p>Here is a bit more info! Let's make it a bit longer to see the full effect of this on our text boxes. This text will go in the menu object eventually.</p>
+                <br>
+                <button type="button" class="moreInfoBtn">find out more</button>
+              </section>
               </div>
             </article>`;
   });
@@ -175,45 +161,59 @@ function displayMenuButtons() {
 function toggleNav() {
   let myNav = document.getElementById("myNav");
   if (myNav.style.width === "100%") {
-    document.getElementById("myNav").style.width = "0%";
+    document.getElementById("myNav").style.width = "0%"
   } else {
-    document.getElementById("myNav").style.width = "100%";
+    document.getElementById("myNav").style.width = "100%"
   }
 }
 
+
 // navbar scrolling
 let prevScrollpos = window.scrollY;
-window.onscroll = function () {
-  let currentScrollPos = window.scrollY;
+window.onscroll = function() {
+let currentScrollPos = window.scrollY;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("filterSection").style.top = "58px";
   } else {
     document.getElementById("filterSection").style.top = "-40px";
   }
   prevScrollpos = currentScrollPos;
-};
+}
 
 // expand menu to offer more content and link to item page
 function expandMenuItem(element) {
   const elementId = element.id;
-  const targetSection = document.getElementById(`menuInfo${elementId}`);
-  const targetTitle = document.getElementById(`menuTitle${elementId}`);
-  if (
-    targetSection.style.display === "none" ||
-    targetSection.style.display === ""
-  ) {
-    targetSection.style.display = "block";
+  const targetSection = document.getElementById(`menuInfo${elementId}`)
+  const targetTitle = document.getElementById(`menuTitle${elementId}`)
+  if ( targetSection.style.display === 'none' || targetSection.style.display === '' ) {
+    targetSection.style.display = 'block';
   } else {
-    targetSection.style.display = "none";
-  }
+    targetSection.style.display = 'none';
+  };
 }
+
+
+//  code for image menu items
+
+// `<article class="menuItem" id="${item.id}">
+//               <div class="itemInfo">
+//               <a href="#content" title="Content Lightbox">
+//                 <img src="${item.img}" class="menuImage" onclick="expandMenuItem(this)"></img>
+//               </a>
+//               <header>
+//                 <p class="menuItemTitle">${item.title}</p>
+//               </header>
+//               </div>
+//             </article>`
+
+
 
 // accordion
 
 const acc = document.getElementsByClassName("accordion");
 
 for (let i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
+  acc[i].addEventListener("click", function() {
     /* Toggle between adding and removing the "active" class,
     to highlight the button that controls the panel */
     this.classList.toggle("active");
@@ -227,4 +227,3 @@ for (let i = 0; i < acc.length; i++) {
     }
   });
 }
-

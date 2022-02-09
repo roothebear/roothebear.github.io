@@ -165,14 +165,9 @@ section {
   padding: 5px;
   padding-left: 10px;
   padding-right: 10px;
-  margin: 3px;
-  font-size: 1rem;
-  color: rgb(3, 29, 46);
-  background-color: rgba(255, 255, 255, 0);
+  border-radius: 30px;
   border-width: 1px;
-  border-color: rgb(3, 29, 46);
   text-align: center;
-  border-radius: 40px;
   transition: 0.3s;
 }
 
@@ -305,70 +300,3 @@ section {
 
 
 /* MEDIA QUERIES */
-
-
-/* MENU - ARTICLE POP UP */
-
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #031d2eda;
-  transition: opacity 0.5s;
-  visibility: hidden;
-  opacity: 0;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-.popup {
-  margin: 15px ;
-  margin-top: 80px;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  transition: all .3s ease-in-out;
-}
-
-.popup h2 {
-  margin-top: 0px;
-  margin: 30px;
-  margin-bottom: 10px;
-  color: #031d2e;
-}
-.popup .close {
-  position: absolute;
-  top: 10px;
-  right: 30px;
-  transition: all 0.3s;
-  font-size: 50px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #031d2e;
-}
-.popup .close:hover {
-  color: #06D85F;
-}
-.popup .content {
-  max-height: 90%;
-  overflow: scroll;
-}
-
-/* 
-@media screen and (max-width: 700px){
-  .box{
-    width: 90%;
-  }
-  .popup{
-    width: 90%;
-  }
-} */
