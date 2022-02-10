@@ -328,7 +328,7 @@ section {
 .popup {
   margin: 15px ;
   margin-top: 80px;
-  padding: 20px;
+  padding: 5px;
   background: #fff;
   border-radius: 5px;
   position: fixed;
@@ -342,7 +342,7 @@ section {
 .popup h2 {
   margin-top: 0px;
   margin: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: #031d2e;
 }
 .popup .close {
@@ -359,7 +359,7 @@ section {
   color: #06D85F;
 }
 .popup .content {
-  max-height: 90%;
+  max-height: 85%;
   overflow: scroll;
 }
 
