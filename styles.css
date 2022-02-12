@@ -1,9 +1,8 @@
-/* GLOBAL */
+/* GLOBAL SETTINGS */
 
 html {
   scroll-behavior: smooth
 }
-
 * {
   padding: 0px;
   margin: 0px;
@@ -12,6 +11,13 @@ html {
   font-size: 18px;
   color: #031d2e;
 }
+
+/* Sections */
+section {
+  padding: 30px;
+}
+
+/* Fonts */
 p {
   font-size: 1rem;
   /* display: -webkit-box;
@@ -28,7 +34,7 @@ h2 {
   font-weight: normal;
   margin-bottom: 1rem;
 }
-/* horizontal dividers */
+/* Horizontal dividers */
 hr { 
     /* display: block; */
     height: 1px;
@@ -36,6 +42,16 @@ hr {
     background-color: rgb(222, 222, 222);
     overflow: hidden;
     margin-bottom : 0em;
+}
+
+/* icons */
+.icon {
+  height: 35px;
+  margin-left: 0px; 
+  margin-right: 0px;
+}
+.icon:hover, .icon:active {
+  transform: scale(1.1) rotate(5deg);
 }
 
 /* TOP OF PAGE SPACE HOLDER */
@@ -67,16 +83,9 @@ hr {
   justify-content: space-between;
 }
 
-.icon {
-  height: 35px;
-  margin-left: 0px; 
-  margin-right: 0px;
-}
-.icon:hover, .icon:active {
-  transform: scale(1.1) rotate(5deg);
-}
 
 /* FILTER SECTION */
+
 .filterSection {
   margin: 0px;
   padding: 10px;
@@ -113,11 +122,8 @@ hr {
 }
 
 
-/* MAIN SECTIONS */
+/* MAIN SECTION */
 
-section {
-  padding: 30px;
-}
 #main {
   transition: margin-top .3s;
   padding: 0px;
@@ -126,41 +132,41 @@ section {
 }
 
 
-/* PORTFOLIO GRID ITEMS */
-.menuItem {
+/* PORTFOLIO ELEMENTS */
+.article {
   float: left;
-  width: 25%;
+  width: 50%;
   padding: 10px;
 }
-.itemContainer {
+.articleContainer {
   padding: 0px;
   border: 0px;
   background-color: rgb(245, 245, 245);
 }
-.menuImage {
+.articleImage {
   width: 100%;
   margin-bottom: 0px;
 }
-.menuItemTitle {
+.articleTitle {
   padding: 25px;
   padding-top: 10px;
   padding-bottom: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: wrap;
+  white-space: nowrap;
   color: #031d2e;
 }
-
+.articleTitle, a {
+    text-decoration: none;
+}
 .menuAddInfo {
   display: none;
   padding: 25px;
 }
-
 .menuAddInfo p {
   color:black;
   margin-bottom: 10px;
 }
-
 .moreInfoBtn {
   padding: 5px;
   padding-left: 10px;
@@ -175,13 +181,12 @@ section {
   border-radius: 40px;
   transition: 0.3s;
 }
-
 .moreInfoBtn:hover {
   color: rgb(255, 255, 255);
   background-color: rgb(10, 124, 94);
 }
 
-
+/* PORTFOLIO LAYOUT */
 /* row and column decoration */
 .row {
   margin: 0px 0px;
@@ -195,21 +200,23 @@ section {
   display: table;
   clear: both;
 }
-/* window size 850 width set */
-@media screen and (max-width: 850px) {
-  .menuItem {
-      width: 50%;
+/* window size 800 width set */
+@media screen and (max-width: 800px) {
+  .article {
+      width: 100%;
   }
 }
-/* window size 400 width set */
+
+/* window size 500 width set */
 @media screen and (max-width: 500px) {
-  .menuItem {
+  .article {
       width: 100%;
   }
 }
 
 
 /* FOOTER */
+
 .footer {
   display: grid;
   width: 100vw;
@@ -218,18 +225,15 @@ section {
   background-color: rgb(245, 245, 245);
   transition: 0.3s;
 }
-
-
 .footer a, p, h1, h2, h3, h4, h5, h6, form {
   color: #031d2e;
 }
 
-/* socials container */
+/* Socials container */
 
 #socialSection {
   display: flex;
 }
-
 #socialsContainer {
   padding-top: 10px;
 }
@@ -238,17 +242,18 @@ section {
   padding-right: 20px;
 }
 
+/* Bottom of pages */
 #bottomSection {
   padding: 10px;
   padding-left: 30px;
   padding-right: 30px;
   background-color: #02131f;
 }
-
 #bottomSection p {
   color: #ffffff;
   font-size: 0.8rem;
 }
+
 
 /* ABOUT SECTION */
 
@@ -257,19 +262,16 @@ section {
   padding:30px;
   padding-bottom:15px;
 }
-
 #aboutHeader {
   padding:0px;
   color: #031d2e;
 }
-
 #aboutSection {
   margin: 0px;
   padding: 0px;
 }
 
-
-/* ABOUT - Accordions */
+/* ACCORDIONS */
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
@@ -290,7 +292,7 @@ section {
   color: white;
 }
 
-/* Style the accordion panel. Note: hidden by default */
+/* Style the accordion panel: hidden by default */
 .panel {
   padding: 30px;
   background-color: rgb(255, 255, 255);
@@ -298,13 +300,9 @@ section {
   display: none;
   overflow: hidden;
 }
-
 .panel p {
     color: #031d2e;
 }
-
-
-/* MEDIA QUERIES */
 
 
 /* MENU - ARTICLE POP UP */
@@ -324,11 +322,11 @@ section {
   visibility: visible;
   opacity: 1;
 }
-
 .popup {
   margin: 15px ;
   margin-top: 80px;
   padding: 5px;
+  padding-right: 20px;
   background: #fff;
   border-radius: 5px;
   position: fixed;
@@ -338,7 +336,6 @@ section {
   right: 0;
   transition: all .3s ease-in-out;
 }
-
 .popup h2 {
   margin-top: 0px;
   margin: 30px;
@@ -348,20 +345,24 @@ section {
 .popup .close {
   position: absolute;
   top: 10px;
-  right: 30px;
+  right: 25px;
   transition: all 0.3s;
   font-size: 50px;
-  font-weight: bold;
+  font-weight: 300;
   text-decoration: none;
   color: #031d2e;
 }
 .popup .close:hover {
-  color: #06D85F;
+  color: rgb(10, 124, 94);
 }
 .popup .content {
   max-height: 85%;
   overflow: scroll;
 }
+
+
+/* MEDIA QUERIES */
+
 
 /* 
 @media screen and (max-width: 700px){
