@@ -17,8 +17,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-
-    <!-- main header -->
+    <!-- page header -->
     <header class="mainHeader" id="mainHeader">
       <nav id="topNav">
         <div class="navContainer">
@@ -35,57 +34,57 @@
       </nav>
       <!-- horizontal divider -->
       <hr />
+      <!-- filter section -->
+      <section class="filterSection" id="portfolioFilterSection">
+        <span>filter:</span>
+        <span class="filterContainer">
+          <!-- <a type="button" class="filter-btn" data-id="all">all</button> -->
+        </span>
+      </section>
     </header>
-
-    <!-- filter section -->
-    <section class="filterSection" id="filterSection">
-      <span>filter:</span>
-      <span class="filterContainer">
-        <!-- <a type="button" class="filter-btn" data-id="all">all</button> -->
-      </span>
-    </section>
-
-    <!-- to allow scrolling to top of page....! -->
+    <!-- marker to allow scrolling to top of page -->
     <div id="topOfPage"></div>
 
-    <!-- main page content (shifts on sidenav) -->
-    <main id="main">
-      <!-- main section populated with content -->
-      <div class="row">
-        <section class="mainSection">
-        </section>
-      </div>
+    <!-- main content -->
+    <main>
+      <!-- portfolio section -->
+      <section id="portfolioSection">
+        <!-- portfolio container -->
+        <div class="row">
+          <div class="portfolioContainer" id="portfolioContainer"></div>
+        </div>
+      </section> 
+      <!-- about section -->
+      <section id="aboutSection">
+        <div class="textContainer">
+          <h1 id="aboutHeader">About me</h1>
+                  <div class="spacer"></div>
+          <p>Thank you for dropping by! I am a freelance full stack developer and love working alongside others to bring ideas to life with a range of front and back end technologies. This site documents my work, interests and continuing learning in this and related areas.</p>
+          <br>
+          <p>My career to date has included Founder and CEO roles in the UK's non-profit sector alongside freelance consulting in areas related to my prior experience. I am most interested in how technology can benefit society and individuals. I hope you'll enjoy browsing the projects, sketches, and blog articles above.</p>
+        </div>
+          <div class="spacer"></div>
+        <button class="accordion">+ Experience and technical skills</button>
+        <div class="panel">
+          <p>Javascript on the front and back end with node.js. Databases with postgres and mongodb. Testing with jest and supertest. Server implementation with express.js</p>
+          <br>
+          <p>Please see the projects and blog posts above for examples of how I have utilised these technologies.</p>
+          <br>
+        </div>
+        
+        <button class="accordion">+ Current interests and professional development</button>
+        <div class="panel">
+          <p>I am currently working on ways to minimise the barriers to inclusion present within digital services. I am actively developing my knowledge of machine learning techniques, database design and implementation, and cryptography.</p>
+          <br>
+        </div>
+        
+        <button class="accordion">+ How to get in touch</button>
+        <div class="panel">
+          <p>In general the best way to contact me is via email or LinkedIn messages, and I will do my best to get back to you as soon as I can. I'll look forward to speaking!</p>
+          <br>
+        </div>
+      </section>
     </main>
-
-    <!-- about section -->
-    <section class="footer-content" id="aboutSection">
-      <div id="aboutHeaderSection">
-        <h1 id="aboutHeader">About:</h1>
-      </div>
-
-      <button class="accordion">+ My background</button>
-      <div class="panel">
-        <p>Non-profit CEO - hiking, reading, and TikTok dancing through life. This portfolio in development will be where I keep my coding and computer science projects, sketches, and blog posts.</p>
-        <br>
-        <a href="#">Download CV</a>
-      </div>
-      
-      <button class="accordion">+ Skills and interests</button>
-      <div class="panel">
-        <p>Non-profit CEO - hiking, reading, and TikTok dancing through life. This portfolio in development will be where I keep
-          my coding and computer science projects, sketches, and blog posts.</p>
-        <br>
-        <a href="#">Download CV</a>
-      </div>
-      
-      <button class="accordion">+ How to get in touch</button>
-      <div class="panel">
-        <p>Non-profit CEO - hiking, reading, and TikTok dancing through life. This portfolio in development will be where I keep
-          my coding and computer science projects, sketches, and blog posts.</p>
-        <br>
-        <a href="#">Download CV</a>
-      </div>
-    </section>
 
     <!-- footer with about and contact -->
     <footer class="footer" id="footer">
@@ -93,40 +92,30 @@
 
       <!-- socials section -->
             <!-- horizontal divider -->
-      <hr />
-      <section class="footer-content" id="socialsSection">
-        <h1>Find me on:</h1>
-        <div id="socialsContainer">
-          <a href="https://github.com/Roothebear">
+      <section>
+        <h1>Find me elsewhere</h1>
+        <div class="iconContainer">
+          <a class="plainLink" href="https://github.com/Roothebear">
             <img class="icon" id="gitHubIcon" src="./images/GitHub-Mark-120px-plus.png" alt="github-icon"></img>
           </a>
-          <a href="https://www.linkedin.com/in/roodasilva/">
+          <a class="plainLink" href="https://www.linkedin.com/in/roodasilva/">
             <img class="icon" id="linkedInIcon" src="./images/LI-In-Bug.png" alt="linked-in-icon"></img>
           </a>
-          <a href="https://github.com/Roothebear">
+          <a class="plainLink" href="https://github.com/Roothebear">
             <img class="icon" id="twitterIcon" src="./images/Twitter social icons - circle - blue.png" alt="twitter-icon"></img>
           </a>
         </div> 
+        <div class="spacer"></div>
       </section>
-
-      <!-- contact section -->
-      <!-- <section class="footer-content" id="contactSection">
-        <h1>Contact</h1>
-        <form>Contact form will go here</form>
-      </section> -->
-
-    <!-- below footer info -->
-    <section class="footer-content" id="bottomSection">
-      <p>Designed in Vanilla HTML, CSS and Javascript by me!  Copyright 2022</p>
+    <!-- website info -->
+    <section class="footer-content" id="siteInfo">
+      <p id="siteInfoBlurb">Designed in Vanilla HTML, CSS and Javascript by me!  Copyright 2022</p>
     </section>
 
     </footer>
 
-
-
     <!-- javascript -->
     <script src="app.js"></script>
-
   </body>
 </html>
 

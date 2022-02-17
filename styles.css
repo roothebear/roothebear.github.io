@@ -1,29 +1,36 @@
 /* GLOBAL SETTINGS */
 
 html {
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 18px;
   color: #031d2e;
 }
 
-/* Sections */
+/* Sections, text boxes */
 section {
-  padding: 30px;
+  padding-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 30px;
 }
 
-/* Fonts */
+/* Fonts, text, links, and headers */
 p {
   font-size: 1rem;
   /* display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1; */
 }
+.onColour {
+  color:#fff;
+}
+
 h1 {
   font-size: 1.4rem;
   font-weight: normal;
@@ -34,24 +41,43 @@ h2 {
   font-weight: normal;
   margin-bottom: 1rem;
 }
-/* Horizontal dividers */
-hr { 
-    /* display: block; */
-    height: 1px;
-    border: 0 none;
-    background-color: rgb(222, 222, 222);
-    overflow: hidden;
-    margin-bottom : 0em;
+.lightHeader {
+  color: #ffffff;
+}
+.textContainer {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.plainLink {
+  text-decoration: none;
+  padding-right: 20px;
+}
+
+/* Horizontal dividers and spacers */
+hr {
+  /* display: block; */
+  height: 1px;
+  border: 0 none;
+  background-color: rgb(222, 222, 222);
+  overflow: hidden;
+  margin-bottom: 0em;
+}
+
+.spacer{
+  height: 30px;
 }
 
 /* icons */
 .icon {
   height: 35px;
-  margin-left: 0px; 
-  margin-right: 0px;
+  margin-left: 10px;
 }
-.icon:hover, .icon:active {
+.icon:hover,
+.icon:active {
   transform: scale(1.1) rotate(5deg);
+}
+.iconContainer {
+  padding-top: 10px;
 }
 
 /* TOP OF PAGE SPACE HOLDER */
@@ -77,18 +103,23 @@ hr {
   font-size: 1.4rem;
 }
 #topNav {
-  display: flex; 
-  padding: 10px;
+  display: flex;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   align-items: center;
   justify-content: space-between;
 }
 
-
-/* FILTER SECTION */
+/* FILTER SECTIONS */
 
 .filterSection {
   margin: 0px;
-  padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background-color: rgb(245, 245, 245);
 }
 .filterSection span {
@@ -113,24 +144,11 @@ hr {
   color: rgb(255, 255, 255);
   background-color: rgb(10, 124, 94);
 }
-#filterSection{
-  position: fixed;
-  top: 58px;
+#portfolioFilterSection {
   width: 100%;
   display: block;
-  transition: top 0.5s;
+  transition: 0.5s;
 }
-
-
-/* MAIN SECTION */
-
-#main {
-  transition: margin-top .3s;
-  padding: 0px;
-  padding-bottom: 50px;
-  margin-top: 0px;
-}
-
 
 /* PORTFOLIO ELEMENTS */
 .article {
@@ -156,15 +174,16 @@ hr {
   white-space: nowrap;
   color: #031d2e;
 }
-.articleTitle, a {
-    text-decoration: none;
+.articleTitle,
+a {
+  text-decoration: none;
 }
 .menuAddInfo {
   display: none;
   padding: 25px;
 }
 .menuAddInfo p {
-  color:black;
+  color: black;
   margin-bottom: 10px;
 }
 .moreInfoBtn {
@@ -200,85 +219,40 @@ hr {
   display: table;
   clear: both;
 }
-/* window size 800 width set */
-@media screen and (max-width: 800px) {
-  .article {
-      width: 100%;
-  }
-}
-
-/* window size 500 width set */
-@media screen and (max-width: 500px) {
-  .article {
-      width: 100%;
-  }
-}
-
 
 /* FOOTER */
 
 .footer {
-  display: grid;
-  width: 100vw;
-  padding: 0px;
-  padding-top: 0px;
   background-color: rgb(245, 245, 245);
-  transition: 0.3s;
-}
-.footer a, p, h1, h2, h3, h4, h5, h6, form {
-  color: #031d2e;
 }
 
-/* Socials container */
-
-#socialSection {
-  display: flex;
-}
-#socialsContainer {
-  padding-top: 10px;
-}
-#socialsContainer a {
-  text-decoration: none;
-  padding-right: 20px;
-}
-
-/* Bottom of pages */
-#bottomSection {
+/* Site info */
+#siteInfo {
   padding: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
-  background-color: #02131f;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: rgb(228, 228, 228);
 }
-#bottomSection p {
-  color: #ffffff;
-  font-size: 0.8rem;
+#siteInfoBlurb {
+  font-size: 16px;
 }
 
 
 /* ABOUT SECTION */
 
-#aboutHeaderSection {
-  background-color: #f5f5f5;
-  padding:30px;
-  padding-bottom:15px;
-}
-#aboutHeader {
-  padding:0px;
-  color: #031d2e;
-}
 #aboutSection {
-  margin: 0px;
-  padding: 0px;
+  background-color: rgb(245, 245, 245);
 }
 
 /* ACCORDIONS */
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-  background-color: #ebebeb;
-  color: #031d2e;
+  background-color: #328d6f;
+  color: #ffffff;
   cursor: pointer;
-  padding: 30px;
+  margin-top: 5px;
+  padding: 20px;
   width: 100%;
   text-align: left;
   border: none;
@@ -287,9 +261,9 @@ hr {
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion:hover {
-  background-color: rgb(10, 124, 94);
-  color: white;
+.active,
+.accordion:hover {
+  background-color: #255f4c;
 }
 
 /* Style the accordion panel: hidden by default */
@@ -299,9 +273,6 @@ hr {
   color: #031d2e;
   display: none;
   overflow: hidden;
-}
-.panel p {
-    color: #031d2e;
 }
 
 
@@ -316,6 +287,7 @@ hr {
   background: #031d2eda;
   transition: opacity 0.5s;
   visibility: hidden;
+  z-index: 99;
   opacity: 0;
 }
 .overlay:target {
@@ -323,24 +295,18 @@ hr {
   opacity: 1;
 }
 .popup {
-  margin: 15px ;
-  margin-top: 80px;
-  padding: 5px;
+  margin: 10px;
+  padding: 0px;
   padding-right: 20px;
   background: #fff;
   border-radius: 5px;
   position: fixed;
+  display: grid;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  transition: all .3s ease-in-out;
-}
-.popup h2 {
-  margin-top: 0px;
-  margin: 30px;
-  margin-bottom: 20px;
-  color: #031d2e;
+  transition: all 0.3s ease-in-out;
 }
 .popup .close {
   position: absolute;
@@ -356,20 +322,46 @@ hr {
   color: rgb(10, 124, 94);
 }
 .popup .content {
-  max-height: 85%;
+  margin-top:10px;
+  margin-bottom: 20px;
   overflow: scroll;
+}
+
+.popupTitle {
+  margin-top: 30px;
+  padding-left: 50px;
+  padding-right: 40px;
 }
 
 
 /* MEDIA QUERIES */
 
+/* window size 770 width set */
+@media screen and (max-width: 770px) {
+  .article {
+    width: 100%;
+  }
+  section {
+    padding: 30px;
+  }
+  #topNav {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 
-/* 
-@media screen and (max-width: 700px){
-  .box{
-    width: 90%;
+  .filterSection {
+    padding: 10px;
   }
-  .popup{
-    width: 90%;
-  }
-} */
+  #bottomSection {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.spacer{
+  height: 20px;
+}
+.popupTitle {
+  padding-left: 30px;
+}
+}
